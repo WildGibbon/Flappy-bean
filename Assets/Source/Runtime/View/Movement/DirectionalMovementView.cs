@@ -1,4 +1,4 @@
-﻿using FlappyBean.Runtime.Model.Movement;
+﻿using FlappyBean.Runtime.Model.Movement.Enemy;
 using UnityEngine;
 
 namespace FlappyBean.Runtime.View.Movement

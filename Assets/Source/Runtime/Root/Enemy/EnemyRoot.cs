@@ -1,5 +1,5 @@
 using FlappyBean.Runtime.Model.Attack;
-using FlappyBean.Runtime.Model.Movement;
+using FlappyBean.Runtime.Model.Movement.Enemy;
 using FlappyBean.Runtime.Root.SystemUpdates;
 using FlappyBean.Runtime.View.Attack;
 using FlappyBean.Runtime.View.Movement;

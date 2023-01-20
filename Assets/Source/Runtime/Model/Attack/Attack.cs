@@ -12,7 +12,7 @@ namespace FlappyBean.Runtime.Model.Attack
 		{
 			if (damage < 0)
 			{
-				throw new ArgumentOutOfRangeException("Damage can not be null");
+				throw new ArgumentOutOfRangeException("Damage can not be less than 0");
 			}
 
 			_damage = damage;
@@ -25,10 +25,7 @@ namespace FlappyBean.Runtime.Model.Attack
 				view.TakeDamage(_damage);
 			}
 
-			else
-			{
-				throw new ArgumentException("Collision dont have HealthTransformView component");
-			}
+		    throw new ArgumentException("Collision dont have HealthTransformView component");
 		}
 	}
 }

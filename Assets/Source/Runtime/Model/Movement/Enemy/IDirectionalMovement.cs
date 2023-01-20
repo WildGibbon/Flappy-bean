@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace FlappyBean.Runtime.Model.Movement
+namespace FlappyBean.Runtime.Model.Movement.Enemy
 {
 	public interface IDirectionalMovement
 	{

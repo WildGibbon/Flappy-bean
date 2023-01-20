@@ -3,7 +3,7 @@ using FlappyBean.Runtime.View.Movement;
 using System;
 using UnityEngine;
 
-namespace FlappyBean.Runtime.Model.Movement
+namespace FlappyBean.Runtime.Model.Movement.Enemy
 {
 	public class DirectionalMovement : IDirectionalMovement, IUpdatable
 	{

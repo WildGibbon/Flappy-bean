@@ -1,6 +1,6 @@
-﻿using FlappyBean.Runtime.Model.Input;
-using FlappyBean.Runtime.Model.Movement.Player.Jump;
+﻿using FlappyBean.Runtime.Model.Movement.Player.Jump;
 using FlappyBean.Runtime.View.Movement.Player.Jump;
+using FlappyBean.TestComponents.Input;
 using NUnit.Framework;
 using UnityEngine;
 

@@ -1,6 +1,6 @@
-﻿using FlappyBean.Runtime.Model.Input;
-using FlappyBean.Runtime.Model.Movement.Player.Rotation;
+﻿using FlappyBean.Runtime.Model.Movement.Player.Rotation;
 using FlappyBean.Runtime.View.Movement.Player.Rotation;
+using FlappyBean.TestComponents.Input;
 using NUnit.Framework;
 
 namespace FlappyBean.Tests.MovementSystem.Player.Rotation
