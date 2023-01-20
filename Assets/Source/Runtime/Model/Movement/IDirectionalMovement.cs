@@ -4,6 +4,6 @@ namespace FlappyBean.Runtime.Model.Movement
 {
 	public interface IDirectionalMovement
 	{
-		Vector2 Position { get; }
+		Vector2 CurrentPosition { get; }
 	}
 }

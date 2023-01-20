@@ -6,13 +6,11 @@ namespace FlappyBean.Runtime.Model.Movement
 	{
 		public readonly float Speed;
 		public readonly Vector2 Direction;
-		public readonly Vector2 Position;
 
-		public DirectionalMovementData(float speed, Vector2 direction, Vector2 position)
+		public DirectionalMovementData(float speed, Vector2 direction)
 		{
 			Speed = speed;
 			Direction = direction;
-			Position = position;
 		}
 	}
 }

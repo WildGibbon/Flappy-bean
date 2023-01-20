@@ -10,20 +10,14 @@ namespace FlappyBean.Runtime.Model.Movement.Player.Rotation
 	{
 		public float Value { get; private set; }
 
-		private readonly float _maxValue;
-		private readonly float _minValue;
-		private readonly float _speed;
-
 		private readonly IInput _input;
+		private readonly PlayerRotationData _data;
 		private readonly IPlayerRotationView _view;
 
 		public PlayerRotation(IInput input, IPlayerRotationView view, PlayerRotationData data)
 		{
+			_data = data;
 			Value = data.MaxValue;
-			_maxValue = data.MaxValue;
-			_minValue = data.MinValue;
-			_speed = data.Speed;
-
 			_input = input ?? throw new ArgumentNullException("Input can not be null");
 			_view = view ?? throw new ArgumentNullException("View can not be null");
 		}
@@ -32,10 +26,10 @@ namespace FlappyBean.Runtime.Model.Movement.Player.Rotation
 		{
 			if (_input.IsJumpKeyPressed)
 			{
-				Value = _maxValue;
+				Value = _data.MaxValue;
 			}
 
-			Value = Mathf.Lerp(Value, _minValue, _speed * Time.deltaTime);
+			Value = Mathf.Lerp(Value, _data.MinValue, _data.Speed * Time.deltaTime);
 
 			_view.Visualize(this);
 		}

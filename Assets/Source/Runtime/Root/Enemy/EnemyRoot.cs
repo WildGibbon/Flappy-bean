@@ -23,8 +23,8 @@ namespace FlappyBean.Runtime.Root.Enemy
 		{
 			_systemUpdate = new SystemUpdate();
 
-			var movementData = new DirectionalMovementData(_movementSpeed, _moveDirection, transform.position);
-			var movement = new DirectionalMovement(_movementView, movementData);
+			var movementData = new DirectionalMovementData(_movementSpeed, _moveDirection);
+			var movement = new DirectionalMovement(_movementView, movementData, transform.position);
 
 			_attackTransformView.Init(new Attack(_damage));
 			_systemUpdate.Add(movement);

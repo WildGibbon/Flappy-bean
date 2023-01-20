@@ -7,23 +7,21 @@ namespace FlappyBean.Runtime.Model.Movement
 {
 	public class DirectionalMovement : IDirectionalMovement, IUpdatable
 	{
-		public Vector2 Position { get; private set; }
+		public Vector2 CurrentPosition { get; private set; }
 
-		private readonly float _speed;
-		private readonly Vector2 _direction;
+		private readonly DirectionalMovementData _data;
 		private readonly IDirectionalMovementView _view;
 
-		public DirectionalMovement(IDirectionalMovementView view, DirectionalMovementData data)
+		public DirectionalMovement(IDirectionalMovementView view, DirectionalMovementData data, Vector2 position)
 		{
-			Position = data.Position;
-			_speed = data.Speed;
-			_direction = data.Direction;
+			CurrentPosition = position;
+			_data = data;
 			_view = view ?? throw new ArgumentNullException("View can not be null");
 		}
 
 		public void Update()
 		{
-			Position += _direction.normalized * _speed * Time.deltaTime;
+			CurrentPosition += _data.Direction.normalized * _data.Speed * Time.deltaTime;
 			_view.Visualize(this);
 		}
 	}

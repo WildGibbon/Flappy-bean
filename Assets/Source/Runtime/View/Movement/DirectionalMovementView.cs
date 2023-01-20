@@ -7,7 +7,7 @@ namespace FlappyBean.Runtime.View.Movement
 	{
 		public void Visualize(IDirectionalMovement movement)
 		{
-			transform.position = movement.Position;
+			transform.position = movement.CurrentPosition;
 		}
 	}
 }
