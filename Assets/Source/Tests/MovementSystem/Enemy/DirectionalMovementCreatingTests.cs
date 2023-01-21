@@ -16,10 +16,7 @@ namespace FlappyBean.Tests.MovementSystem.Enemy
 				var movement = new DirectionalMovement(null, data, Vector2.zero);
 			}
 
-			catch
-			{
-				Assert.Pass();
-			}
+			catch { Assert.Pass(); }
 		}
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using FlappyBean.Runtime.Model.Input;
 
-namespace FlappyBean.TestComponents.Input
+namespace FlappyBean.Tests.TestComponents.Input
 {
 	public class TestInput : IInput
 	{

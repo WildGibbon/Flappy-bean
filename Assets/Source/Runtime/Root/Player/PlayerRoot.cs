@@ -1,9 +1,12 @@
 ﻿using FlappyBean.Runtime.Model.Input;
 using FlappyBean.Runtime.Model.Movement.Player.Rotation;
-using FlappyBean.Runtime.Root.SystemUpdates;
+using FlappyBean.Runtime.Model.Movement.Player.Jump;
+using FlappyBean.Runtime.Model.Score;
 using FlappyBean.Runtime.View.Health;
 using FlappyBean.Runtime.View.Movement.Player;
 using FlappyBean.Runtime.View.Movement.Player.Rotation;
+using FlappyBean.Runtime.View.Score;
+using FlappyBean.Runtime.Root.SystemUpdates;
 using UnityEngine;
 
 namespace FlappyBean.Runtime.Root.Player
@@ -22,6 +25,10 @@ namespace FlappyBean.Runtime.Root.Player
 		[SerializeField] private int _rotationSpeed;
 		[SerializeField] private IPlayerRotationView _rotationView;
 		[Space]
+		[SerializeField] private int _scoreValue;
+		[SerializeField] private IScoreTransformView _scoreTransformView;
+		[SerializeField] private IScoreView _scoreView;
+		[Space]
 		[SerializeField] private IInput _input;
 
 		private ISystemUpdate _systemUpdate;
@@ -31,9 +38,9 @@ namespace FlappyBean.Runtime.Root.Player
 			_systemUpdate = new SystemUpdate();
 
 			_healthTransformView.Init(new Model.Health.Health(_healthValue));
+			_scoreTransformView.Init(new Score(_scoreValue, _scoreView));
 
-			var jump = new Model.Movement.Player.Jump.PlayerJump(_jumpView, _input, _jumpDirection);
-
+			var jump = new PlayerJump(_jumpView, _input, _jumpDirection);
 			var rotationData = new PlayerRotationData(_maxRotation, _minRotation, _rotationSpeed);
 			var rotation = new PlayerRotation(_input, _rotationView, rotationData);
 

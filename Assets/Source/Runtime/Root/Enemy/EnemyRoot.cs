@@ -1,8 +1,10 @@
 using FlappyBean.Runtime.Model.Attack;
 using FlappyBean.Runtime.Model.Movement.Enemy;
+using FlappyBean.Runtime.Model.Score.Interactions;
 using FlappyBean.Runtime.Root.SystemUpdates;
 using FlappyBean.Runtime.View.Attack;
 using FlappyBean.Runtime.View.Movement;
+using FlappyBean.Runtime.View.Score.Interactions;
 using UnityEngine;
 
 namespace FlappyBean.Runtime.Root.Enemy
@@ -16,13 +18,17 @@ namespace FlappyBean.Runtime.Root.Enemy
 		[Space]
 		[SerializeField] private int _damage;
 		[SerializeField] private AttackTransformView _attackTransformView;
+		[Space]
+		[SerializeField] private ScoreInteractionTransformView _scoreInteraction;
+		[SerializeField] private int _scoreUpValue;
 
 		private ISystemUpdate _systemUpdate;
 
 		public override void Compose()
 		{
 			_systemUpdate = new SystemUpdate();
-
+			_scoreInteraction.Init(new ScoreUpInteraction(_scoreUpValue));
+			
 			var movementData = new DirectionalMovementData(_movementSpeed, _moveDirection);
 			var movement = new DirectionalMovement(_movementView, movementData, transform.position);
 
