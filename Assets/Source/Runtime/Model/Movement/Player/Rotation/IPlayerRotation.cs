@@ -3,5 +3,7 @@
 	public interface IPlayerRotation
 	{
 		float Value { get; }
+		void Rotate();
+		void Update();
 	}
 }

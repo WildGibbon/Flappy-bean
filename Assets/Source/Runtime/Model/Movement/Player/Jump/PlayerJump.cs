@@ -6,26 +6,21 @@ using UnityEngine;
 
 namespace FlappyBean.Runtime.Model.Movement.Player.Jump
 {
-	public class PlayerJump : IPlayerJump, IUpdatable
+	public class PlayerJump : IPlayerJump
 	{
 		private readonly IPlayerJumpView _view;
-		private readonly IInput _jumpInput;
 
 		public Vector2 Direction { get; }
 
-		public PlayerJump(IPlayerJumpView view, IInput jumpInput, Vector2 jumpDirection)
+		public PlayerJump(IPlayerJumpView view, Vector2 jumpDirection)
 		{
 			_view = view ?? throw new ArgumentNullException("View cannot be null");
-			_jumpInput = jumpInput ?? throw new ArgumentNullException("Input cannot be null");
 			Direction = jumpDirection;
 		}
 
-		public void Update()
+		public void Jump()
 		{
-			if (_jumpInput.IsJumpKeyPressed)
-			{
-				_view.Visualize(this);
-			}
+			_view.Visualize(this);
 		}
 	}
 }

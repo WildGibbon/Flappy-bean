@@ -40,11 +40,13 @@ namespace FlappyBean.Runtime.Root.Player
 			_healthTransformView.Init(new Model.Health.Health(_healthValue));
 			_scoreTransformView.Init(new Score(_scoreValue, _scoreView));
 
-			var jump = new PlayerJump(_jumpView, _input, _jumpDirection);
+			var jump = new PlayerJump(_jumpView, _jumpDirection);
 			var rotationData = new PlayerRotationData(_maxRotation, _minRotation, _rotationSpeed);
-			var rotation = new PlayerRotation(_input, _rotationView, rotationData);
+			var rotation = new PlayerRotation(_rotationView, rotationData);
 
-			_systemUpdate.Add(jump, rotation);
+			var player = new Model.Movement.Player.Player(rotation, jump, _input);
+
+			_systemUpdate.Add(player);
 		}
 
 		private void Update() => _systemUpdate?.UpdateAll();

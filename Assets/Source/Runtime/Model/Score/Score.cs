@@ -31,7 +31,7 @@ namespace FlappyBean.Runtime.Model.Score
 			{
 				throw new InvalidOperationException($"Can not score lower on {value}, its so much");
 			}
-
+			
 			Value -= value;
 			_view.Visualize(this);
 		}

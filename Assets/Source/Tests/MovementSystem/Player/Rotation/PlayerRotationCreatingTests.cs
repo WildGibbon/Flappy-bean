@@ -15,19 +15,12 @@ namespace FlappyBean.Tests.MovementSystem.Player.Rotation
 
 			try
 			{
-				var rotation = new PlayerRotation(null, new NullPlayerRotationView(), rotationData);
+				var rotation = new PlayerRotation(null, rotationData);
 			}
 
 			catch { errors++; }
 
-			try
-			{
-				var rotation = new PlayerRotation(new TestInput(), null, rotationData);
-			}
-
-			catch { errors++; }
-
-			Assert.AreEqual(errors, 2);
+			Assert.AreEqual(errors, 1);
 		}
 	}
 }
