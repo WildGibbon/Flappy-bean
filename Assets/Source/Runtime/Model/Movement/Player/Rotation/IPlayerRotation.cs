@@ -1,6 +1,8 @@
-﻿namespace FlappyBean.Runtime.Model.Movement.Player.Rotation
+﻿using FlappyBean.Runtime.Root.SystemUpdates;
+
+namespace FlappyBean.Runtime.Model.Movement.Player.Rotation
 {
-	public interface IPlayerRotation
+	public interface IPlayerRotation : IUpdatable
 	{
 		float Value { get; }
 		void Rotate();
