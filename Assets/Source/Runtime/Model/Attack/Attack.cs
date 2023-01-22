@@ -20,12 +20,12 @@ namespace FlappyBean.Runtime.Model.Attack
 
 		public void Collide(Collider2D collider)
 		{
-			if (collider.TryGetComponent<IHealthTransformView>(out IHealthTransformView view))
+			if (!collider.TryGetComponent<IHealthTransformView>(out IHealthTransformView view))
 			{
-				view.TakeDamage(_damage);
-			}
+				throw new ArgumentException("Collision dont have HealthTransformView component");
+		    }
 
-		    throw new ArgumentException("Collision dont have HealthTransformView component");
+		    view.TakeDamage(_damage);
 		}
 	}
 }

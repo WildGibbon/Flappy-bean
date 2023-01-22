@@ -16,10 +16,12 @@ namespace FlappyBean.Runtime.View.Score.Interactions
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
-			if (collision.TryGetComponent<IScoreTransformView>(out IScoreTransformView score))
+			if (!collision.TryGetComponent<IScoreTransformView>(out IScoreTransformView score))
 			{
-				_scoreInteraction.Interact(score);
+				throw new ArgumentException("Collision dont have ScoreTransformView component");
 			}
+
+		    _scoreInteraction.Interact(score);
 		}
 	}
 }

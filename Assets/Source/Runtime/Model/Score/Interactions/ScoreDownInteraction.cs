@@ -19,7 +19,10 @@ namespace FlappyBean.Runtime.Model.Score.Interactions
 
 		public void Interact(IScoreTransformView score)
 		{
-			score.Down(_scoreDownValue);
+			if(score.CanDown(_scoreDownValue)) 
+			{ 
+				score.Down(_scoreDownValue);
+			}
 		}
 	}
 }
