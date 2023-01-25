@@ -8,9 +8,9 @@ namespace FlappyBean.Runtime.View.Score
 	{
 		[SerializeField] private TMP_Text _label;
 
-		public void Visualize(IScore score)
+		public void Visualize(int score)
 		{
-			_label.text = score.Value.ToString();
+			_label.text = score.ToString();
 		}
 	}
 }

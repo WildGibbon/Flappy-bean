@@ -12,7 +12,7 @@ namespace FlappyBean.Runtime.Root.Enemy
 
 		public override void Compose()
 		{
-			_attackTransformView.Init(new Attack(_damage));
+			_attackTransformView.Init(new DefaultAttack(_damage));
 		}
 	}
 }

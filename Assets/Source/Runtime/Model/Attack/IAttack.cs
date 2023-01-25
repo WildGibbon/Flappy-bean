@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using FlappyBean.Runtime.Model.Health;
+using UnityEngine;
 
 namespace FlappyBean.Runtime.Model.Attack
 {
 	public interface IAttack
 	{
-		void Collide(Collider2D collider);
+		void Attack(IHealth health);
 	}
 }

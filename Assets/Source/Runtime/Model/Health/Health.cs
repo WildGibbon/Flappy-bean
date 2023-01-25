@@ -54,5 +54,10 @@ namespace FlappyBean.Runtime.Model.Health
 
 			Value += count;
 		}
+
+		public bool CanHeal(int count)
+		{
+			return Value + count <= MaxValue; 
+		}
 	}
 }

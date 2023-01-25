@@ -5,6 +5,6 @@ namespace FlappyBean.Tests.TestsComponents
 {
 	public class NullScoreView : IScoreView
 	{
-		public void Visualize(IScore score) { }
+		public void Visualize(int scoreValue) { }
 	}
 }

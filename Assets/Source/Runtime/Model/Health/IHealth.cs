@@ -8,5 +8,6 @@
 
 		void TakeDamage(int value);
 		void Heal(int value);
+		bool CanHeal(int value);
 	}
 }

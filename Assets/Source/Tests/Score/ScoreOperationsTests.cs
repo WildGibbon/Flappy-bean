@@ -19,7 +19,7 @@ namespace FlappyBean.Tests.Score
 		{
 		    try
 			{
-				_score.Up(-1);
+				_score.Increase(-1);
 			}
 
 			catch { Assert.Pass(); }
@@ -32,14 +32,14 @@ namespace FlappyBean.Tests.Score
 
 			try
 			{
-				_score.Down(-1);
+				_score.Decrease(-1);
 			}
 
 			catch { errors++; }
 
 			try
 			{
-				_score.Down(1);
+				_score.Decrease(1);
 			}
 
 			catch { errors++; }
@@ -50,7 +50,7 @@ namespace FlappyBean.Tests.Score
 		[Test]
 		public void IsScoreUpCalculatingCorrectly()
 		{
-			_score.Up(1);
+			_score.Increase(1);
 
 			Assert.AreEqual(_score.Value, 1);
 		}
@@ -58,8 +58,8 @@ namespace FlappyBean.Tests.Score
 		[Test]
 		public void IsScoreDownCalculatingCorrectly()
 		{
-			_score.Up(1);
-			_score.Down(1);
+			_score.Increase(1);
+			_score.Decrease(1);
 
 			Assert.AreEqual(_score.Value, 0);
 		}

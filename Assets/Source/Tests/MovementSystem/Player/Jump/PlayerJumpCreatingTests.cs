@@ -1,5 +1,5 @@
-﻿using FlappyBean.Runtime.Model.Movement.Player.Jump;
-using FlappyBean.Runtime.View.Movement.Player.Jump;
+﻿using FlappyBean.Runtime.Model.Movement.Character.Jump;
+using FlappyBean.Runtime.View.Movement.Character.Jump;
 using FlappyBean.Tests.TestComponents.Input;
 using NUnit.Framework;
 using UnityEngine;
@@ -15,7 +15,7 @@ namespace FlappyBean.Tests.MovementSystem.Player.Jump
 
 			try
 			{
-				var jump = new PlayerJump(null, new Vector2(0, 1));
+				var jump = new CharacterJump(null, new Vector2(0, 1));
 			}
 
 			catch { errors++; }

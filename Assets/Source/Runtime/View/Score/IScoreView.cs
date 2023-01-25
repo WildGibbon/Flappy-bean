@@ -4,6 +4,6 @@ namespace FlappyBean.Runtime.View.Score
 {
 	public interface IScoreView
 	{
-		void Visualize(IScore score);
+		void Visualize(int scoreValue);
 	}
 }

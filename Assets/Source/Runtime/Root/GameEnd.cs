@@ -24,7 +24,7 @@ namespace FlappyBean.Runtime.Root
 			{
 				yield return new WaitForSeconds(_playerDeathCheckDelay);
 
-				if (_playerHealth.IsDead)
+				if (_playerHealth.Health.IsDead)
 				{
 					StopGame();
 				}

@@ -2,7 +2,7 @@
 
 namespace FlappyBean.Tests.TestComponents.Input
 {
-	public class TestInput : IInput
+	public class TestInput : IJumpInput
 	{
 		public bool IsJumpKeyPressed => true;
 	}

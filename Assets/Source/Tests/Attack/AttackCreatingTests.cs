@@ -9,7 +9,7 @@ namespace FlappyBean.Tests.Attack
 		{
 			try
 			{
-				var attack = new Runtime.Model.Attack.Attack(-1);
+				var attack = new Runtime.Model.Attack.DefaultAttack(-1);
 			}
 
 			catch { Assert.Pass(); }

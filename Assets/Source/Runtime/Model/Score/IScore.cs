@@ -3,8 +3,8 @@
 	public interface IScore
 	{
 		int Value { get; }
-		void Up(int value);
-		void Down(int value);
+		void Increase(int value);
+		void Decrease(int value);
 		bool CanDown(int value);
 	}
 }

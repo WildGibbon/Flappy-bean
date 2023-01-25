@@ -5,9 +5,9 @@ namespace FlappyBean.Runtime.View.Movement
 {
 	public class DirectionalMovementView : MonoBehaviour, IDirectionalMovementView
 	{
-		public void Visualize(IDirectionalMovement movement)
+		public void Visualize(Vector2 position)
 		{
-			transform.position = movement.CurrentPosition;
+			transform.position = position;
 		}
 	}
 }

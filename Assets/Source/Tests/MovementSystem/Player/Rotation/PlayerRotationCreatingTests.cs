@@ -1,5 +1,5 @@
-﻿using FlappyBean.Runtime.Model.Movement.Player.Rotation;
-using FlappyBean.Runtime.View.Movement.Player.Rotation;
+﻿using FlappyBean.Runtime.Model.Movement.Character.Rotation;
+using FlappyBean.Runtime.View.Movement.Character.Rotation;
 using FlappyBean.Tests.TestComponents.Input;
 using NUnit.Framework;
 
@@ -11,11 +11,11 @@ namespace FlappyBean.Tests.MovementSystem.Player.Rotation
 		public void CantCreateWithInvalidArguments()
 		{
 			var errors = 0;
-			var rotationData = new PlayerRotationData(90, -90, 1);
+			var rotationData = new CharacterRotationData(90, -90, 1);
 
 			try
 			{
-				var rotation = new PlayerRotation(null, rotationData);
+				var rotation = new CharacterRotation(null, rotationData);
 			}
 
 			catch { errors++; }

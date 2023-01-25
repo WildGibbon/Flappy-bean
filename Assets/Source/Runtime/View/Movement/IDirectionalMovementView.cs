@@ -1,9 +1,9 @@
-﻿using FlappyBean.Runtime.Model.Movement.Enemy;
+﻿using UnityEngine;
 
 namespace FlappyBean.Runtime.View.Movement
 {
 	public interface IDirectionalMovementView
 	{
-		void Visualize(IDirectionalMovement movement);
+		void Visualize(Vector2 position);
 	}
 }

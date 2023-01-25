@@ -20,7 +20,7 @@ namespace FlappyBean.Runtime.Model.Score
 			_view = view ?? throw new ArgumentNullException("Score view can not be null");
 		}
 
-		public void Down(int value)
+		public void Decrease(int value)
 		{
 			if(value < 0)
 			{
@@ -33,10 +33,10 @@ namespace FlappyBean.Runtime.Model.Score
 			}
 			
 			Value -= value;
-			_view.Visualize(this);
+			_view.Visualize(Value);
 		}
 
-		public void Up(int value)
+		public void Increase(int value)
 		{
 			if (value < 0)
 			{
@@ -44,7 +44,7 @@ namespace FlappyBean.Runtime.Model.Score
 			}
 
 			Value += value;
-			_view.Visualize(this);
+			_view.Visualize(Value);
 		}
 
 		public bool CanDown(int value)

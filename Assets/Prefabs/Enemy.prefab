@@ -137,6 +137,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 1234570091143116215}
+    - {fileID: 4456982401180185188, guid: a16fbd33cf25de14b882df0fa4b15d66, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -145,11 +146,14 @@ MonoBehaviour:
     - Name: _movementView
       Entry: 10
       Data: 0
+    - Name: _character
+      Entry: 10
+      Data: 1
   _movementSpeed: 4
   _moveDirection: {x: -1, y: 0}
   _damage: 1
   _attackTransformView: {fileID: 1234570091143116168}
-  _scoreInteraction: {fileID: 737284995224456822}
+  _scoreIncreaseArea: {fileID: 4450518192680087199}
   _scoreUpValue: 1
 --- !u!114 &1234570091143116215
 MonoBehaviour:
@@ -237,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6650656440474743505}
   - component: {fileID: 4358515375661651028}
-  - component: {fileID: 737284995224456822}
+  - component: {fileID: 4450518192680087199}
   m_Layer: 0
   m_Name: ScoreUpInteraction
   m_TagString: Untagged
@@ -285,7 +289,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.40990284, y: 0.64447844}
   m_EdgeRadius: 0
---- !u!114 &737284995224456822
+--- !u!114 &4450518192680087199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,9 +298,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3935557601078925167}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84dfa2e7ba0980541ba45a0d70d8da2a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ab3e13ae1db4cf45b5efaa654b6022e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _increaseValue: 1
 --- !u!1 &4060290873241993904
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ namespace FlappyBean.Runtime.Model.Movement.Enemy
 		public void Update()
 		{
 			CurrentPosition += _data.Direction.normalized * _data.Speed * Time.deltaTime;
-			_view.Visualize(this);
+			_view.Visualize(CurrentPosition);
 		}
 	}
 }

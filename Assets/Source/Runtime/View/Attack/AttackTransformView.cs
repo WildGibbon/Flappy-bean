@@ -1,4 +1,5 @@
 ﻿using FlappyBean.Runtime.Model.Attack;
+using FlappyBean.Runtime.View.Health;
 using System;
 using UnityEngine;
 
@@ -15,7 +16,12 @@ namespace FlappyBean.Runtime.View.Attack
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
-			_attack.Collide(collision);
+			if (!collision.TryGetComponent<IHealthTransformView>(out IHealthTransformView healthTransformView))
+			{
+				throw new ArgumentException("Collision dont have HealthTransfomView component");
+			}
+
+			_attack.Attack(healthTransformView.Health);
 		}
 	}
 }
