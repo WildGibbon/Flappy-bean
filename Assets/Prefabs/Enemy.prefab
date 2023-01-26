@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: aed51e8b17a174442a025a5e8a9a1e27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -133,23 +133,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 0b010d0000005f006d006f00760065006d0065006e007400560069006500770000000000
     ReferencedUnityObjects:
     - {fileID: 1234570091143116215}
-    - {fileID: 4456982401180185188, guid: a16fbd33cf25de14b882df0fa4b15d66, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: _movementView
-      Entry: 10
-      Data: 0
-    - Name: _character
-      Entry: 10
-      Data: 1
-  _movementSpeed: 4
+    SerializationNodes: []
+  _movementSpeed: 3
   _moveDirection: {x: -1, y: 0}
   _damage: 1
   _attackTransformView: {fileID: 1234570091143116168}
@@ -243,7 +236,7 @@ GameObject:
   - component: {fileID: 4358515375661651028}
   - component: {fileID: 4450518192680087199}
   m_Layer: 0
-  m_Name: ScoreUpInteraction
+  m_Name: ScoreIncreaseArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,7 +365,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 623a325be771c6e4989abcdba805842a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

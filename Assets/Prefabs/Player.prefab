@@ -98,8 +98,9 @@ GameObject:
   - component: {fileID: 4456982401180185191}
   - component: {fileID: 4456982401180185184}
   - component: {fileID: 997758157}
+  - component: {fileID: 1492498571}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 4456982401180185186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 4456982400300125418}
   m_Father: {fileID: 0}
@@ -160,7 +161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93515e85ac945e94590ec0babe476033, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -204,14 +205,18 @@ MonoBehaviour:
     - Name: _rotationView
       Entry: 10
       Data: 2
+    - Name: _scoreView
+      Entry: 6
+      Data: 
     - Name: _input
       Entry: 6
       Data: 
   _healthValue: 1
-  _jumpDirection: {x: 0, y: 300}
+  _jumpDirection: {x: 0, y: 400}
   _maxRotation: 60
   _minRotation: -80
   _rotationSpeed: 1
+  _scoreValue: 0
 --- !u!114 &4456982401180185189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,7 +244,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -284,4 +289,23 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.47
+--- !u!95 &1492498571
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4456982401180185186}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f278d0910bf76a543be53916e8d12549, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
