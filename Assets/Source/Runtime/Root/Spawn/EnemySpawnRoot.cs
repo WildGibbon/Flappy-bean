@@ -18,7 +18,7 @@ namespace FlappyBean.Runtime.Root
 			_systemUpdate = new SystemUpdate();
 
 			var timer = new Timer(_timeBetweenSpawn);
-			var spawnCycle = new SpawnCycle<Enemy.Enemy>(_factory, timer);
+			var spawnCycle = new SpawnCycle<Enemy.EnemyRoot>(_factory, timer);
 			
 			_systemUpdate.Add(spawnCycle);
 		}

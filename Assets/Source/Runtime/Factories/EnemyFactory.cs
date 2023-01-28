@@ -4,20 +4,21 @@ using UnityEngine;
 
 namespace FlappyBean.Runtime.Factories
 {
-	public class EnemyFactory : MonoBehaviour, IFactory<Enemy>
+	public class EnemyFactory : MonoBehaviour, IFactory<EnemyRoot>
 	{
-		[SerializeField] private Enemy _enemyRoot;
+		[SerializeField] private EnemyRoot _enemyRoot;
 		[SerializeField] private CharacterRoot _characterRoot;
 		[SerializeField] private Transform _spawnPoint;
 		[SerializeField] private float _spawnSpread;
 
-		public Enemy Create()
+		public EnemyRoot Create()
 		{
 			var spread = UnityEngine.Random.Range(-_spawnSpread, _spawnSpread);
 			var spawnPoint = _spawnPoint.position + Vector3.up * spread;
 
 			var enemy = Instantiate(_enemyRoot, spawnPoint, Quaternion.identity, _spawnPoint);
 			enemy.Init(_characterRoot.Score);
+			enemy.Compose();
 
 			return enemy;
 		}

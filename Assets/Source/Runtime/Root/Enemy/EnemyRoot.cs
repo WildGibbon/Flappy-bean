@@ -5,13 +5,14 @@ using FlappyBean.Runtime.Root.SystemUpdates;
 using FlappyBean.Runtime.View.Attack;
 using FlappyBean.Runtime.View.Movement;
 using UnityEngine;
+using System;
 using Sirenix.OdinInspector;
 using FlappyBean.Runtime.Model.Score;
 
 namespace FlappyBean.Runtime.Root.Enemy
 {
 	[RequireComponent(typeof(Collider2D))]
-	public class Enemy : SerializedMonoBehaviour
+	public class EnemyRoot : CompositeRoot
 	{
 		[SerializeField] private float _movementSpeed;
 		[SerializeField] private Vector2 _moveDirection;
@@ -25,10 +26,14 @@ namespace FlappyBean.Runtime.Root.Enemy
 	    
 		private IScore _score;
 		private ISystemUpdate _systemUpdate;
-
+		
 		public void Init(IScore score)
 		{
-			_score = score;
+			_score = score ?? throw new ArgumentNullException("Score can not be null");
+		}
+
+		public override void Compose()
+		{
 			_systemUpdate = new SystemUpdate();
 			_scoreIncreaseArea.Init(_score);
 			
