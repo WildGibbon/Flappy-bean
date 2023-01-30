@@ -1,11 +1,12 @@
 ﻿using FlappyBean.Runtime.Model.Character;
 using FlappyBean.Runtime.Root.Character;
 using FlappyBean.Runtime.Root.Enemy;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace FlappyBean.Runtime.Factories
 {
-	public class EnemyFactory : MonoBehaviour, IFactory<EnemyRoot>
+	public class EnemyFactory : SerializedMonoBehaviour, IFactory<EnemyRoot>
 	{
 		[SerializeField] private EnemyRoot _enemyRoot;
 		[SerializeField] private Transform _spawnPoint;
