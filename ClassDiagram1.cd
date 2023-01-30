@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FlappyBean.Tests.Attack.AttackCreatingTests" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\Attack\AttackCreatingTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.Health.CreatingHealthTests" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\Health\CreatingHealthTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.Health.HealthOperationsTests" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACQACAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Assets\Source\Tests\Health\HealthOperationsTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.MovementSystem.Enemy.DirectionalMovementCreatingTests" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\MovementSystem\Enemy\DirectionalMovementCreatingTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.MovementSystem.Player.Jump.PlayerJumpCreatingTests" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\MovementSystem\Player\Jump\PlayerJumpCreatingTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.MovementSystem.Player.Jump.PlayerJumpWorkingTests" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\MovementSystem\Player\Jump\PlayerJumpWorkingTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.MovementSystem.Player.Rotation.PlayerRotationCreatingTests" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\MovementSystem\Player\Rotation\PlayerRotationCreatingTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.Score.ScoreCreatingTests" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\Score\ScoreCreatingTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.Score.ScoreOperationsTests" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABCAAAAgAAAAAIAAAAAAAAAAAAAAAAIAAABAA=</HashCode>
+      <FileName>Assets\Source\Tests\Score\ScoreOperationsTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FlappyBean.Tests.TestsComponents.NullDirectionalMovementView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\TestsComponents\NullDirectionalMovementView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlappyBean.Tests.TestsComponents.NullScoreView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\TestsComponents\NullScoreView.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="FlappyBean.Tests.TestComponents.Input.TestInput" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Tests\TestsComponents\TestInput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

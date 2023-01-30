@@ -9,11 +9,12 @@ using FlappyBean.Runtime.View.Score;
 using FlappyBean.Runtime.Root.SystemUpdates;
 using UnityEngine;
 using FlappyBean.Runtime.Model.Player;
+using FlappyBean.Runtime.Model.Character;
 
 namespace FlappyBean.Runtime.Root.Character
 {
 	[RequireComponent(typeof(Collider2D))]
-	public class CharacterRoot : CompositeRoot, ICharacter
+	public class CharacterRoot : CompositeRoot
 	{
 		[SerializeField] private int _healthValue;
 		[SerializeField] private IHealthTransformView _healthTransformView;
@@ -30,6 +31,8 @@ namespace FlappyBean.Runtime.Root.Character
 		[SerializeField] private IScoreView _scoreView;
 		[Space]
 		[SerializeField] private IJumpInput _input;
+		[Space]
+		[SerializeField] private ICharacter _character;
 
 		private ISystemUpdate _systemUpdate;
 
@@ -37,16 +40,18 @@ namespace FlappyBean.Runtime.Root.Character
 
 		public override void Compose()
 		{
-			Score = new Score(_scoreValue, _scoreView);
 			_systemUpdate = new SystemUpdate();
 
 			_healthTransformView.Init(new Model.Health.Health(_healthValue));
+
+			var score = new Score(_scoreValue, _scoreView);
+			_character.Init(score);
 
 			var jump = new CharacterJump(_jumpView, _jumpDirection);
 			var rotationData = new CharacterRotationData(_maxRotation, _minRotation, _rotationSpeed);
 			var rotation = new CharacterRotation(_rotationView, rotationData);
 
-			var player = new Runtime.Model.Player.Player(rotation, jump, _input);
+			var player = new Player(rotation, jump, _input);
 
 			_systemUpdate.Add(player);
 		}

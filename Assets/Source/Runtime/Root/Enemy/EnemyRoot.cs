@@ -24,18 +24,18 @@ namespace FlappyBean.Runtime.Root.Enemy
 		[SerializeField] private ScoreIncreaseArea _scoreIncreaseArea;
 		[SerializeField] private int _scoreUpValue;
 	    
-		private IScore _score;
+		private IScore _increasingScore;
 		private ISystemUpdate _systemUpdate;
 		
 		public void Init(IScore score)
 		{
-			_score = score ?? throw new ArgumentNullException("Score can not be null");
+			_increasingScore = score ?? throw new ArgumentNullException("Score can not be null");
 		}
 
 		public override void Compose()
 		{
 			_systemUpdate = new SystemUpdate();
-			_scoreIncreaseArea.Init(_score);
+			_scoreIncreaseArea.Init(_increasingScore);
 			
 			var movementData = new DirectionalMovementData(_movementSpeed, _moveDirection);
 			var movement = new DirectionalMovement(_movementView, movementData, transform.position);

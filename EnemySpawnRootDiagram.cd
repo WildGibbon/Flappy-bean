@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="FlappyBean.Runtime.Factories.EnemyFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="34.75" Y="4" Width="1.5" />
+    <AssociationLine Name="_enemyRoot" Type="FlappyBean.Runtime.Root.Enemy.EnemyRoot" ManuallyRouted="true">
+      <Path>
+        <Point X="35.5" Y="4.691" />
+        <Point X="35.5" Y="5.362" />
+        <Point X="37.75" Y="5.362" />
+        <Point X="37.75" Y="5.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.456" Y="0.379" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_character" Type="FlappyBean.Runtime.Model.Character.ICharacter" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="35.5" Y="4.691" />
+        <Point X="35.5" Y="5.362" />
+        <Point X="33.5" Y="5.362" />
+        <Point X="33.5" Y="5.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAAAEACAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Factories\EnemyFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_enemyRoot" />
+      <Field Name="_character" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Left" Position="0.127" />
+  </Class>
+  <Class Name="FlappyBean.Runtime.Model.Spawn.SpawnCycle&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="27.25" Y="4" Width="1.5" />
+    <AssociationLine Name="_factory" Type="FlappyBean.Runtime.Factories.IFactory&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="28" Y="4.562" />
+        <Point X="28" Y="5.375" />
+        <Point X="26.188" Y="5.375" />
+        <Point X="26.188" Y="5.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_timer" Type="FlappyBean.Runtime.Model.Spawn.Timer.ITimer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="28" Y="4.562" />
+        <Point X="28" Y="5.375" />
+        <Point X="29.75" Y="5.375" />
+        <Point X="29.75" Y="5.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Spawn\SpawnCycle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_factory" />
+      <Field Name="_timer" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="FlappyBean.Runtime.Root.EnemySpawnRoot" Collapsed="true" HideInheritanceLine="true">
+    <Position X="30" Y="2.5" Width="3" />
+    <AssociationLine Name="_spawnCycle" Type="FlappyBean.Runtime.Model.Spawn.SpawnCycle&lt;T&gt;">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.124" Y="0.82" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQABAAAEAAgAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAg=</HashCode>
+      <FileName>Assets\Source\Runtime\Root\Spawn\EnemySpawnRoot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_spawnCycle" />
+      <Field Name="_factory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FlappyBean.Runtime.Root.Enemy.EnemyRoot" Collapsed="true" HideInheritanceLine="true">
+    <Position X="37" Y="5.75" Width="1.5" />
+    <AssociationLine Name="_increasingScore" Type="FlappyBean.Runtime.Model.Score.IScore" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="37.75" Y="6.441" />
+        <Point X="37.75" Y="6.816" />
+        <Point X="36.5" Y="6.816" />
+        <Point X="36.5" Y="7.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.087" Y="0.256" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_scoreIncreaseArea" Type="FlappyBean.Runtime.Model.Score.Area.ScoreIncreaseArea" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="37.75" Y="6.441" />
+        <Point X="37.75" Y="6.816" />
+        <Point X="39.125" Y="6.816" />
+        <Point X="39.125" Y="7.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.55" Y="0.27" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AASABABAEAAAAAAAAAAAAABAAABUAAAAAgAKAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Root\Enemy\EnemyRoot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_increasingScore" />
+      <Field Name="_scoreIncreaseArea" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FlappyBean.Runtime.Model.Score.Area.ScoreIncreaseArea" Collapsed="true">
+    <Position X="38.25" Y="7.5" Width="1.75" />
+    <AssociationLine Name="_score" Type="FlappyBean.Runtime.Model.Score.IScore">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.166" Y="0.137" Height="0.182" Width="0.673" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAgAAAAAAAAAAAEAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Score\ScoreArea\ScoreIncreaseArea.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_score" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="FlappyBean.Runtime.Factories.IFactory&lt;T&gt;" Collapsed="true">
+    <Position X="25.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Factories\IFactory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FlappyBean.Runtime.Model.Score.IScore" Collapsed="true">
+    <Position X="35.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Score\IScore.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FlappyBean.Runtime.Model.Spawn.Timer.ITimer" Collapsed="true" HideInheritanceLine="true">
+    <Position X="29" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Spawn\Timer\ITimer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="FlappyBean.Runtime.Model.Character.ICharacter" Collapsed="true">
+    <Position X="32.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Source\Runtime\Model\Character\ICharacter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

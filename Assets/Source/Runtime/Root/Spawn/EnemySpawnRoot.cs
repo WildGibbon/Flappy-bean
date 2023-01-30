@@ -11,16 +11,18 @@ namespace FlappyBean.Runtime.Root
 		[SerializeField] private EnemyFactory _factory;
 		[SerializeField] private float _timeBetweenSpawn;
 
+		private SpawnCycle<Enemy.EnemyRoot> _spawnCycle;
 		private SystemUpdate _systemUpdate;
+		private ITimer _timer;
 
 		public override void Compose()
 		{
 			_systemUpdate = new SystemUpdate();
 
-			var timer = new Timer(_timeBetweenSpawn);
-			var spawnCycle = new SpawnCycle<Enemy.EnemyRoot>(_factory, timer);
+			_timer = new Timer(_timeBetweenSpawn);
+			_spawnCycle = new SpawnCycle<Enemy.EnemyRoot>(_factory, _timer);
 			
-			_systemUpdate.Add(spawnCycle);
+			_systemUpdate.Add(_spawnCycle);
 		}
 
 		private void Update() => _systemUpdate.UpdateAll();
