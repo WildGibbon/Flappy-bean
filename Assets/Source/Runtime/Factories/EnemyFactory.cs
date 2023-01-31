@@ -15,7 +15,7 @@ namespace FlappyBean.Runtime.Factories
 
 		public EnemyRoot Create()
 		{
-			var spread = UnityEngine.Random.Range(-_spawnSpread, _spawnSpread);
+			var spread = Random.Range(-_spawnSpread, _spawnSpread);
 			var spawnPoint = _spawnPoint.position + Vector3.up * spread;
 
 			var enemy = Instantiate(_enemyRoot, spawnPoint, Quaternion.identity, _spawnPoint);
